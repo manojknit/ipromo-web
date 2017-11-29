@@ -6,11 +6,11 @@ cd /home/ubuntu/
 if [ ! -f /usr/bin/dotnet ]; then
     apt-get install libunwind8
 
-    wget https://download.microsoft.com/download/5/F/0/5F0362BD-7D0A-4A9D-9BF9-022C6B15B04D/dotnet-runtime-2.0.0-linux-x64.tar.gz -P /opt/dotnet/ \
-    && md5sum -c <<< "f6a5669138394d40c5c894308e66be99 /opt/dotnet/dotnet-runtime-2.0.0-linux-x64.tar.gz" \
-    && tar -xvzf /opt/dotnet/dotnet-runtime-2.0.0-linux-x64.tar.gz -C /opt/dotnet/ \
+    wget https://download.microsoft.com/download/1/B/4/1B4DE605-8378-47A5-B01B-2C79D6C55519/dotnet-sdk-2.0.0-linux-x64.tar.gz -P /opt/dotnet/ \
+    && md5sum -c <<< "f6a5669138394d40c5c894308e66be99 /opt/dotnet/dotnet-sdk-2.0.0-linux-x64.tar.gz" \
+    && tar -xvzf /opt/dotnet/dotnet-sdk-2.0.0-linux-x64.tar.gz -C /opt/dotnet/ \
     && ln -sf /opt/dotnet/dotnet /usr/bin/dotnet \
-    && rm /opt/dotnet/dotnet-runtime-2.0.0-linux-x64.tar.gz
+    && rm /opt/dotnet/dotnet-sdk-2.0.0-linux-x64.tar.gz
 fi
 
 # first time running dotnet tool requires setting up package cache
