@@ -12,3 +12,4 @@ artifacts:
   files:
     - AspNetCoreWebApplication/build_output/**/*
     - scripts/**/*
+    - appspec.yml
